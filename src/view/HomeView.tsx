@@ -18,9 +18,15 @@ const HomeView: React.FC = () => {
       </p>
       <button
         onClick={() => navigate('/viewpoint')}
-        className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-md transition duration-200 mb-6"
+        className="bg-gray-900 hover:bg-gray-900 text-gray font-semibold py-3 px-8 rounded-md transition duration-200 mb-6"
       >
         Comenzar
+      </button>
+      <button
+        onClick={() => navigate('/HardMode')}
+        className="bg-pink-500 hover:bg-pink-600 text-gray font-semibold py-3 px-8 rounded-md transition duration-200 mb-6"
+      >
+        HardMode
       </button>
 
       {topScores.length > 0 && (

@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ViewPoint: React.FC = () => {
-  const [position, setPosition] = useState({ x: 80, y: 80 });
+const HardMode: React.FC = () => {
+  const [position, setPosition] = useState({ x: 60, y: 60 });
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(30);
   const [gameEnded, setGameEnded] = useState(false);
   const [playerName, setPlayerName] = useState('');
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const targetTimeRef = useRef<number>(900);
+  const targetTimeRef = useRef<number>(400);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const finalAudioRef = useRef<HTMLAudioElement | null>(null);
   const navigate = useNavigate();
@@ -67,7 +67,7 @@ const ViewPoint: React.FC = () => {
         }
         return prev - 1;
       });
-    }, 1000);
+    }, 800);
 
     changePosition();
 
@@ -101,7 +101,7 @@ const ViewPoint: React.FC = () => {
 
       {/* HUD */}
       <div className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center border-b border-gray-300 bg-white/80 backdrop-blur-sm z-10">
-        <span className="text-lg font-semibold text-pink-600">Caricias: {score}</span>
+        <span className="text-lg font-semibold text-pink-600">Acaricias: {score}</span>
         <span className="text-lg font-semibold text-gray-800">Tiempo: {timeLeft}s</span>
       </div>
 
@@ -113,11 +113,11 @@ const ViewPoint: React.FC = () => {
         style={{
           top: `${position.y}%`,
           left: `${position.x}%`,
-          transform: 'translate(-50%, -50%)',
+          transform: 'translate(-50%, -50%)'
         }}
         >
         <audio ref={finalAudioRef} src="/atrapame/public/mew final.mp3" />
-          🐱
+          😾
         </button>
       )}
 
@@ -136,7 +136,7 @@ const ViewPoint: React.FC = () => {
             />
             <button
               onClick={saveScore}
-              className="bg-gray-500 hover:bg-pink-600 text-gray py-2 px-6 rounded-lg font-semibold transition-transform hover:scale-105"
+              className="bg-pink-500 hover:bg-pink-600 text-gray py-2 px-6 rounded-lg font-semibold transition-transform hover:scale-105"
             >
               Guardar y salir
             </button>
@@ -161,4 +161,4 @@ const ViewPoint: React.FC = () => {
   );
 };
 
-export default ViewPoint;
+export default HardMode;
