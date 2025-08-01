@@ -10,12 +10,19 @@ const HomeView: React.FC = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center bg-white text-center px-6">
+      <img
+        src="/oiia-cat.gif"
+        alt="Gatito animado"
+        className="w-40 h-40 mb-4"
+      />
+
       <h1 className="text-4xl font-semibold text-gray-800 mb-4">
         Acaricia al Gatito 🐱
       </h1>
       <p className="text-base text-gray-600 mb-8 max-w-md">
         Tienes 30 segundos para acariciar al gatito tantas veces como puedas. Haz clic sobre él rápidamente y suma puntos con cada caricia. 🐾
       </p>
+
       <button
         onClick={() => navigate('/viewpoint')}
         className="bg-gray-900 hover:bg-gray-900 text-gray font-semibold py-3 px-8 rounded-md transition duration-200 mb-6"
@@ -52,7 +59,7 @@ const HomeView: React.FC = () => {
       )}
 
       <footer className="absolute bottom-4 text-gray-400 text-xs font-mono">
-        © 2025 Gatito Game - SENA SOFT
+        © 2025 Gatito Game - SENA SOFT - ANDRES LASSO
       </footer>
     </div>
   )

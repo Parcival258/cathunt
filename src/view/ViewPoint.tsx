@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const ViewPoint: React.FC = () => {
   const [position, setPosition] = useState({ x: 80, y: 80 });
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(5);
   const [gameEnded, setGameEnded] = useState(false);
   const [playerName, setPlayerName] = useState('');
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -136,14 +136,14 @@ const ViewPoint: React.FC = () => {
             />
             <button
               onClick={saveScore}
-              className="bg-gray-500 hover:bg-pink-600 text-gray py-2 px-6 rounded-lg font-semibold transition-transform hover:scale-105"
+              className="bg-gray-500 hover:bg-gray-900 text-gray font-semibold py-3 px-8 rounded-md transition duration-200 mb-6"
             >
               Guardar y salir
             </button>
             <div>
             <button
               onClick={()=> navigate('/')}
-              className="mt-2 bg-pink-500 hover:bg-pink-600 text-gray py-2 px-6 rounded-lg font-semibold transition-transform hover:scale-105"
+              className="bg-gray-900 hover:bg-gray-900 text-gray font-semibold py-3 px-8 rounded-md transition duration-200 mb-6"
             >
               salir
             </button>
