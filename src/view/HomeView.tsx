@@ -33,7 +33,7 @@ const HomeView: React.FC = () => {
         onClick={() => navigate('/HardMode')}
         className="bg-pink-500 hover:bg-pink-600 text-gray font-semibold py-3 px-8 rounded-md transition duration-200 mb-6"
       >
-        HardMode
+        Gatito enjado 😾
       </button>
 
       {topScores.length > 0 && (
